@@ -3,6 +3,7 @@ import Image from "../components/Image";
 import { Link } from "react-router-dom";
 import PostMenuActions from "../components/PostMenuActions";
 import Search from "../components/Search";
+import Comments from "../components/Comments";
 
 const SinglePostPage = () => {
   return (
@@ -33,7 +34,7 @@ const SinglePostPage = () => {
         </div>
       </div>
       {/* content */}
-      <div className="text-white flex flex-col md:flex-row gap-8">
+      <div className="text-white flex flex-col md:flex-row gap-12">
         <div className="lg:text-lg flex flex-col gap-6 text-justify">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem earum
@@ -139,14 +140,14 @@ const SinglePostPage = () => {
         <div className="px-4 h-max sticky top-8">
           <h1 className="mb-4 text-sm font-medium">Aurthor</h1>
           <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-6">
               <Image
                 path="profile.png"
                 className="w-12 h-12 rounded-full object-cover"
                 w="48"
                 h="48"
               />
-              <Link>Ramesh Kumar</Link>
+              <Link className="text-white">Ramesh Kumar</Link>
             </div>
             <p className="text-sm text-gray-400">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -187,6 +188,7 @@ const SinglePostPage = () => {
           <Search />
         </div>
       </div>
+      <Comments/>
     </div>
   );
 };
